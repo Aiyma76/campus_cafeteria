@@ -1,4 +1,11 @@
-/* ===== Shared base styles ===== */
+body {
+    background-color: #ff4757;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -13,13 +20,7 @@
     --white: #ffffff;
 }
 
-body {
-    margin: 0;
-    line-height: 1.6;
-    color: var(--text);
-    background-color: #ff4757;
-    font-family: Arial, sans-serif;
-}
+
 
 a {
     color: inherit;
