@@ -1,8 +1,302 @@
+<<<<<<< HEAD
 
 /* =================================
    CAMPUS BITES - GENERAL STYLING
 ================================= */
 
+=======
+body {
+    background-color: #ff4757;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --brand: #8b3a24;
+    --brand-dark: #612718;
+    --accent: #f3c969;
+    --text: #282522;
+    --muted: #6b625c;
+    --surface: #fffaf4;
+    --white: #ffffff;
+}
+
+
+
+a {
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h2 {
+    margin-bottom: 16px;
+    font-size: 2rem;
+}
+
+.site-header {
+    background: var(--white);
+    border-bottom: 1px solid #eee4db;
+}
+
+.header-content {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    color: var(--brand);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.site-nav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+    color: var(--brand);
+}
+
+/* ===== Home page: hero ===== */
+.hero {
+    background: var(--brand-dark);
+    color: var(--white);
+    padding: 90px 0;
+}
+
+.hero-content {
+    max-width: 1100px;
+}
+
+.eyebrow {
+    color: var(--brand);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero .eyebrow {
+    color: var(--accent);
+}
+
+.hero h1 {
+    max-width: 720px;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.12;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.eyebrow) {
+    max-width: 650px;
+    font-size: 1.1rem;
+    color: #f8eae2;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: opacity 0.2s ease;
+}
+
+.button:hover {
+    opacity: 0.85;
+}
+
+.button-primary {
+    background: var(--accent);
+    color: #33200e;
+}
+
+.button-secondary {
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+/* ===== Home page: welcome and information ===== */
+.welcome-section {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.welcome-section p {
+    color: var(--muted);
+}
+
+.info-card {
+    padding: 28px;
+    border-radius: 12px;
+    background: var(--surface);
+    border: 1px solid #efe1d4;
+}
+
+.info-card h3 {
+    color: var(--brand);
+    font-size: 1.4rem;
+}
+
+.info-card p {
+    margin-bottom: 10px;
+}
+
+.small-note {
+    font-size: 0.8rem;
+}
+
+.text-link {
+    color: var(--brand);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== Home page: highlights ===== */
+.highlights {
+    background: var(--surface);
+    padding: 70px 0;
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.highlight-card {
+    padding: 25px;
+    background: var(--white);
+    border: 1px solid #efe1d4;
+    border-radius: 12px;
+}
+
+.highlight-card h3 {
+    color: var(--brand);
+}
+
+.highlight-card p {
+    color: var(--muted);
+}
+
+/* ===== Home page: feedback banner ===== */
+.feedback-banner {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.feedback-banner p {
+    color: var(--muted);
+}
+
+.site-footer {
+    padding: 24px 0;
+    background: #29211d;
+    color: var(--white);
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* ===== Responsive design ===== */
+@media (max-width: 800px) {
+    .header-content {
+        padding-top: 18px;
+        padding-bottom: 18px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .welcome-section {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .highlight-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .site-nav {
+        gap: 10px 16px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .button {
+        text-align: center;
+    }
+
+    .highlight-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+}
+/* ==========================================================================
+   Base & Typography
+   ========================================================================== */
+>>>>>>> origin/feature/order-page
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +304,7 @@
 }
 
 body {
+<<<<<<< HEAD
     font-family: Arial, sans-serif;
     background-color: #fffaf0;
     color: #333;
@@ -164,3 +459,156 @@ footer {
         font-size: 14px;
     }
 }
+=======
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #334155;
+    background-color: #f8fafc;
+    padding: 0 1rem;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+header {
+    max-width: 800px;
+    margin: 2rem auto 1rem auto;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.25rem;
+    color: #0f172a;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.5px;
+}
+
+header nav {
+    font-size: 1rem;
+    color: #94a3b8;
+}
+
+header nav a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Dividers
+   ========================================================================== */
+hr {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    max-width: 800px;
+    margin: 1.5rem auto;
+}
+
+/* ==========================================================================
+   Main Content Layout
+   ========================================================================== */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+main > h2 {
+    font-size: 1.6rem;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid #2563eb;
+    padding-left: 0.75rem;
+}
+
+main > p {
+    color: #64748b;
+    margin-bottom: 1.75rem;
+    font-size: 1.05rem;
+}
+
+/* ==========================================================================
+   Steps Section (Cards)
+   ========================================================================== */
+main h3 {
+    font-size: 1.15rem;
+    color: #1e293b;
+    margin-top: 1.25rem;
+    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
+}
+
+main h3 + p {
+    background-color: #f1f5f9;
+    border-radius: 8px;
+    padding: 0.85rem 1.25rem;
+    margin-bottom: 1rem;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+}
+
+/* ==========================================================================
+   Important Guidelines List
+   ========================================================================== */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+ul li {
+    position: relative;
+    padding: 0.75rem 1rem 0.75rem 2.25rem;
+    margin-bottom: 0.5rem;
+    background-color: #fffbeb;
+    border: 1px solid #fef3c7;
+    border-radius: 6px;
+    color: #92400e;
+    font-weight: 500;
+}
+
+/* Custom bullet icon */
+ul li::before {
+    content: "•";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #d97706;
+    font-size: 1.5rem;
+    line-height: 0;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+    max-width: 800px;
+    margin: 1.5rem auto 3rem auto;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.875rem;
+}
+
+/* Responsive adjustment for mobile screens */
+@media (max-width: 640px) {
+    main {
+        padding: 1.5rem 1.25rem;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+    }
+}
+>>>>>>> origin/feature/order-page
