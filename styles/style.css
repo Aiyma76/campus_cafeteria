@@ -124,3 +124,124 @@ footer {
         padding: 18px;
     }
 }
+
+/* ===== Deals Page Styling ===== */
+
+.deals-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background: var(--surface);
+}
+
+.deals-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.deals-heading h2 {
+    color: var(--brand-dark);
+}
+
+.deals-heading p {
+    color: var(--muted);
+}
+
+/* Deals Grid */
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Individual Deal Card */
+.deal-card {
+    padding: 28px;
+    background: var(--white);
+    border: 1px solid #efe1d4;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(97, 39, 24, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deal-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(97, 39, 24, 0.12);
+}
+
+/* Deal Icon */
+.deal-icon {
+    display: inline-block;
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+/* Deal Category */
+.deal-tag {
+    color: var(--brand);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+/* Deal Title */
+.deal-card h3 {
+    color: var(--brand-dark);
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+}
+
+/* Deal Description */
+.deal-card > p:not(.deal-tag) {
+    color: var(--muted);
+    min-height: 50px;
+}
+
+/* Deal Price Section */
+.deal-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-top: 1px solid #efe1d4;
+    padding-top: 16px;
+    margin-top: 18px;
+}
+
+.deal-bottom strong {
+    color: var(--brand);
+    font-size: 1.4rem;
+}
+
+.deal-bottom span {
+    background: #fff3d5;
+    color: var(--brand-dark);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* ===== Deals Page Responsive Design ===== */
+
+@media (max-width: 800px) {
+    .deals-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .deals-section {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .deals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .deal-card {
+        padding: 22px;
+    }
+}
