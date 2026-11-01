@@ -1,0 +1,247 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f5f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #5b3525;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd28a;
+}
+
+/* Main Content */
+main {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 20px;
+}
+
+.feedback-section,
+.contact-section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #5b3525;
+    margin-bottom: 15px;
+}
+
+.feedback-section p {
+    margin-bottom: 20px;
+}
+
+/* Feedback Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #5b3525;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #7b4b35;
+}
+
+/* Footer */
+footer {
+    background-color: #5b3525;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 600px) {
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+
+    main {
+        margin: 15px auto;
+        padding: 12px;
+    }
+
+    .feedback-section,
+    .contact-section {
+        padding: 18px;
+    }
+}
+
+/* ===== Deals Page Styling ===== */
+
+.deals-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background: var(--surface);
+}
+
+.deals-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.deals-heading h2 {
+    color: var(--brand-dark);
+}
+
+.deals-heading p {
+    color: var(--muted);
+}
+
+/* Deals Grid */
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Individual Deal Card */
+.deal-card {
+    padding: 28px;
+    background: var(--white);
+    border: 1px solid #efe1d4;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(97, 39, 24, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deal-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(97, 39, 24, 0.12);
+}
+
+/* Deal Icon */
+.deal-icon {
+    display: inline-block;
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+/* Deal Category */
+.deal-tag {
+    color: var(--brand);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+/* Deal Title */
+.deal-card h3 {
+    color: var(--brand-dark);
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+}
+
+/* Deal Description */
+.deal-card > p:not(.deal-tag) {
+    color: var(--muted);
+    min-height: 50px;
+}
+
+/* Deal Price Section */
+.deal-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-top: 1px solid #efe1d4;
+    padding-top: 16px;
+    margin-top: 18px;
+}
+
+.deal-bottom strong {
+    color: var(--brand);
+    font-size: 1.4rem;
+}
+
+.deal-bottom span {
+    background: #fff3d5;
+    color: var(--brand-dark);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* ===== Deals Page Responsive Design ===== */
+
+@media (max-width: 800px) {
+    .deals-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .deals-section {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .deals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .deal-card {
+        padding: 22px;
+    }
+}
